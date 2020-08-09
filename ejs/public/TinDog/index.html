@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tindog</title>
+
+  <link rel="shortcut icon" type="image" href="images/dog.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome Script -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body>
+
+  <section id="title">
+
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">댕댕이들을 위한 Tinder, Tindog!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">연락처</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">가격</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">다운로드</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <h1>주변에 가까운 강아지들을 만나보세요.</h1>
+          <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
+            Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i>
+            Download</button>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <center>
+            <i class="fas fa-check-circle custom-fas"></i>
+            <h3>쉽게 이용 가능.</h3>
+            <p>쉽고 빠르게 이용할수 있습니다. 당신의 강아지도 사용할수 있을 정도로 쉽습니다.</p>
+          </center>
+        </div>
+
+        <div class="col-lg-4">
+          <center>
+            <i class="fas fa-bullseye custom-fas"></i>
+            <h3>최고의 고객만족!</h3>
+            <p>모든 종류의 최상의 강아지들만 있답니다.</p>
+          </center>
+        </div>
+
+        <div class="col-lg-4">
+          <center>
+            <i class="fas fa-heart custom-fas"></i>
+            <h3>품질 보증</h3>
+            <p>강아지의 이성 친구를 찾아주세요! 실패시 전액 환불.</p>
+          </center>
+        </div>
+      </div>
+
+      <div class="example-video">
+      <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise -->
+      <!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 -->
+      <video width="640" height="360" controls>
+        <!-- MP4 must be first for iPad! -->
+        <source src="videos/Heemang.mp4" type="video/mp4" /><!-- Safari / iOS video    -->
+        <!-- fallback to Flash: -->
+        <object width="640" height="360" type="application/x-shockwave-flash" data="__FLASH__.SWF">
+          <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+          <param name="movie" value="__FLASH__.SWF" />
+          <param name="flashvars" value="controlbar=over&amp;image=__POSTER__.JPG&amp;file=__VIDEO__.MP4" />
+          <!-- fallback image. note the title field below, put the title of the video there -->
+        </object>
+      </video>
+      <!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
+      <p> <strong>Download Video:</strong>
+        Closed Format: <a href="videos/Heemang.mp4">"MP4"</a>
+      </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>주인과 산책 나올때가 너~무 좋아요 :)</h2>
+          <img class="testimonial-image" src="images/Heemang.jpg" alt="my-puppy">
+          <em>희망, 의정부</em>
+        </div>
+        <div class="carousel-item">
+          <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+          <em>Pebbles, New York</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of
+            their life. I think.</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+
+
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <h2>A Plan for Every Dog's Needs</h2>
+    <p>Simple and affordable price plans for your and your dog.</p>
+
+    <div class="card-deck row">
+      <div class="pricing-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="pup-name">포메라니안</h3>
+          </div>
+          <div class="card-body">
+            <h2>Free</h2>
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="btn btn-outline-dark btn-block btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="pup-name">래브라도</h3>
+          </div>
+          <div class="card-body">
+            <h2>₩ 50,000 / mo</h2>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="btn btn-dark btn-block btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-col col-lg-4 col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="pup-name">마스티프</h3>
+          </div>
+          <div class="card-body">
+            <h2>₩ 100,000 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button type="button" class="btn btn-dark btn-block btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+    <div class="container">
+      <h3>Find the True Love of Your Dog's Life Today.</h3>
+      <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+      <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i>
+        Download</button>
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <div class="container">
+      <a href="www.twitter.com"><i class="fab fa-twitter sns-style"></i></a>
+      <a href="www.facebook.com"><i class="fab fa-facebook-f sns-style"></i></a>
+      <a href="www.instagram.com"><i class="fab fa-instagram sns-style"></i></a>
+      <a href="mailto:heecheon92@gmail.com"><i class="fas fa-envelope sns-style"></i></a>
+      <p>© Copyright 2020 TinDog</p>
+    </div>
+
+
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+<h1 style="margin-top: 10%;">Compose</h1>
+<form id="editForm" action="/posts/<%=postContent._id%>?_method=PUT" method="post"></form>
+<form id="cancelForm" action="/posts/<%=postContent._id%>" method="get"></form>
+<div class="form-group">
+    <label for="titleLabel">Title</label>
+    <input type="text" name="postTitle" class="form-control" value="<%= postContent.title %>" autocomplete="off" form="editForm">
+</div>
+<div class="form-group">
+    <label for="postLabel">Post</label>
+    <textarea name="postBody" class="form-control" rows="4" autocomplete="off" form="editForm"><%= postContent.content %></textarea>
+</div>
+<button type="submit" class="btn btn-primary" form="editForm">수정 완료</button>
+<button type="submit" class="btn btn-primary" form="cancelForm">취소</button>
+<%- include("partials/footer") %>

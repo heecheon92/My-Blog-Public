@@ -1,0 +1,41 @@
+<%- include("partials/header") -%>
+<h1 style="margin-top: 10%;"><%= postContent.title %> </h1>
+<br>
+<p><%= postContent.content %> </p>
+<form action="/posts/<%=postContent._id%>/edit" method="get" style="display: inline-block;">
+    <br>
+    <button type="submit" class="btn btn-primary">수정하기</button>
+</form>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    삭제하기
+</button>
+
+<!-- Modal -->
+<!-- Do not use default modal class "modal fade" but class "modal fade in" -->
+<!-- source: https://stackoverflow.com/questions/16093568/bootstrap-modal-not-displaying/56470284#56470284 -->
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content myModal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title">정말로 삭제 하시겠습니까?</h3>
+            </div>
+            <div class="modal-body">
+                이 포스트를 삭제합니다. 삭제 후에는 이 포스트에 접근 할 수 없습니다.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                <form action="/posts/<%=postContent._id%>?_method=DELETE" method="post" style="display: inline-block;">
+                    <button type="submit" class="btn btn-primary">삭제하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer") -%>

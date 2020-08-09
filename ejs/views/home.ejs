@@ -1,0 +1,45 @@
+<%- include("partials/header") -%>
+<div class="row" style="margin-top: 10%;">
+    <div class="col-md-6">
+        <!-- <div class="float-md-left" style="width: 200px; height: 200px; border-style: dotted; display: inline-block;"></div> -->
+        <center>
+            <p>
+                서울 <br>
+                온도: <%= temperature %> <br>
+                날씨: <%= weather %> <br>
+                <img src="<%- imageURL %>" alt="weather image">
+            </p>
+        </center>
+    </div>
+    <div class="col-md-6">
+        <center>
+            <a href="/TinDog/index.html" class="btn btn-primary" style="margin-top: 10%;">반응형 프론트엔드 보기</a>
+        </center>
+    </div>
+</div>
+<h1>Home</h1>
+<p><%= homestart%> </p>
+<p>
+    제가 대학교에서 웹 관련 수업을 들었을땐 프레임워크 라는 개념도 몰랐고 pure하게 Vanilla HTML, CSS, Javascript, PHP, 그리고 MySQL 정도로 간단한 웹페이지 구현만 한걸로
+    기억합니다. 그때 당시에는 HTML로 웹페이지 프론트엔드를 구현하려면 "와 이걸 언제 다 HTML로 수작업을 해야하는거야?" 하며 단순 노동이라 생각했었습니다.
+    그러곤 종종 Facebook, YouTube, Netflix 라던가 좀 잘 꾸며진 웹사이트들의 소스를 봤는데 단순한 HTML 태그가 아닌 처음보는 커스텀 태그들이 많았습니다. 조금 조사를 하다보니 DOM을
+    이용하거나 React와 같은 프레임워크를 이용해 HTML 태그를 상속할 수 있다는걸 알게 됩니다.
+    하지만 구글 서치로 단순 조각 모음한 지식으론 유연하게 웹 개발 기술 역량을 늘리기엔 부족하다 느껴 Udemy와 같은 동영상 강의를 통해 독학하면서 조금씩 배워 만들어본게 이 웹페이지 입니다. <br>
+    이 페이지를 구현하는데 사용해본 모듈이나 프레임워크는 프론트엔드는 Bootstrap을 이용해 반응성을 넣어 이 웹페이지를 볼때 데스크탑이던 핸드폰이던 media에 맞추어 보여지게 했으며 백엔드에선
+    NodeJS와 MongoDB를 이용한 Mongoose를 사용해 블로그 포스팅에 persistence를 더하였습니다. 아직은 이것저것 편집하며 테스팅할 것들이 많아
+    제 로컬 컴퓨터에서 데이터베이스를 다루고 있지만 어느정도 모양새가 갖추어지면 MongoDB Atlas와 Heroku등을 이용해 접근성을 조금 높여볼 생각입니다. 추가적으로 아직 React에 대해서 배우는 초기
+    단계에 있지만 꼭 수업내용을 이수해서 좀 더 나은 웹 개발자가 되도록 한걸음 한걸음 나아가겠습니다.
+
+
+</p>
+<form action="/compose" method="get">
+    <button type="submit" class="btn btn-warning">글 포스팅 해보기</button>
+</form>
+<% for( let index = 0; index < postContent.length; index++ ) { %>
+<h1><%= postContent[index].title %> </h1>
+<p>
+    <%= postContent[index].content.substring(0, 100) + "..." %>
+    <a href="/posts/<%=postContent[index]._id%>"> 자세히 보기 </a>
+</p>
+<% } %>
+<%- include("partials/footer") -%>
