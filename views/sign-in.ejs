@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+<!-- <center> -->
+<div class="container mt-5">
+    <div class="row" id="loginbox">
+        <div class="container">
+            <h1>Login</h1>
+        </div>
+        <div class="col-sm-6">
+            <div class="card-body">
+                <form action="/auth/google" method="GET" id="googleAuthForm"></form>
+                <form action="/auth/naver" method="GET" id="naverAuthForm"></form>
+                <!-- Makes POST request to /sign-in route -->
+                <form action="/sign-in" method="POST" id="sign-inForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">비밀번호</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                </form>
+                <button type="submit" class="btn btn-success" form="sign-inForm">Login</button>
+                <p style="color: red;"><%- failureReason %></p>
+                <div class="container" style="margin-top: 5%;">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-social btn-google" form="googleAuthForm">
+                                <i class="fab fa-google"></i>
+                                구글 계정으로 로그인하기
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-social btn-naver" form="naverAuthForm">
+                                <img class="btn btn-social-icon" src="images/naverLogoGreen.png" alt="naverLogo">
+                                네이버 계정으로 로그인하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <!-- <div class="col-md-12 control"> -->
+                <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                    회원이 아니신가요?
+                    <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                        회원 가입하기
+                    </a>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div id="signupbox" style="display:none; margin-top:50px" class="row">
+        <div class="container">
+            <h1>회원가입 하기</h1>
+        </div>
+        <div class="col-sm-6">
+            <!-- PassportJS expects "username" field; otherwise, bad request -->
+            <form action="/register" class="form-horizontal" method="POST">
+                <div class="form-group">
+                    <label for="email" class="col-md-3 control-label">Email</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="email" placeholder="Email 주소">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="col-md-3 control-label">이름</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="name" placeholder="이름">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-md-3 control-label">비밀번호</label>
+                    <div class="col-md-9">
+                        <input type="password" class="form-control" name="password" placeholder="비밀번호">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!-- Button -->
+                    <div class="col-md-offset-3 col-md-9">
+                        <button type="submit" class="btn btn-info"><i class="icon-hand-right"></i>
+                            가입하기</button>
+                    </div>
+                </div>
+            </form>
+            <div style="font-size: 150%;">
+                <a href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">이미 계정이 있습니다.</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </center> -->
+<%- include('partials/footer') %>
